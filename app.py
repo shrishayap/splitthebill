@@ -89,8 +89,8 @@ def err404(e):
 def err500(e):
     return render_template('error.html', error = "500: Server error", desc = "Something went wrong on our end.", ex_desc = "If you got this page after trying to upload an image, it means our AI was not able to properly process your receipt. Make sure your image is clear and only features the receipt."), 500
 
-3
-app.secret_key = ""
+
+app.secret_key = "tempkeyforgithub"
 
 
 if __name__ == "__main__":
