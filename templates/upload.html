@@ -1,0 +1,37 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<title>Upload - Reciept Reader</title>
+{% endblock %}
+
+{% block body %}
+<div class="flexbox-container">
+        
+    <div class='left-container small'>
+        <h2>Upload Your Receipt</h2>
+        <p>Upload a picture of your receipt on the right. Make sure the photo is as clear as possible and that the photo only includes the receipt. Otherwise, our AI might not be able to work its magic!</p>
+        <p class='small-text'>*Only .png .jpg and .jpeg file types are accepted</p>
+    </div>
+
+    <div class='right-container'>
+        <form action="/select" method="post" enctype="multipart/form-data">
+
+            <label class='secondary-btn' for='file'>
+                Click to upload file &plus;
+            </label>
+        
+            <input type="file" name="file" id='file' accept=".png, .jpg, .jpeg">
+
+            <div class='image-preview' id='imagePreview'>
+                <img src="" alt="Image preview" class="image-preview__image">
+                <span class="image-preview__default-text">Image Preview</span>
+            </div>
+
+            <button type="submit" class='next-page'>Next &rarr;</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+

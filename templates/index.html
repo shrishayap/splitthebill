@@ -1,0 +1,37 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<title>Home - Reciept Reader</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="flexbox-container">
+        
+  <div class='left-container'>
+      <h1>Welcome to Receipt Reader</h1>
+      <p>Receipt Reader is a web application that helps make splitting the bill easier. Simply upload your receipt, select which person bought which item, input some additional information and you get a list of how much each person owes.</p>
+      <p> Get started by putting a list of everyone's names on the right.</p>
+  </div>
+
+  <div class='right-container'>
+      <form action="/upload" method="post">
+        <div id='names'>
+          <label for='name'>Name</label>
+          <br>
+          <input type="text" name="name_1"  placeholder="Name" id="name" required>
+        </div>
+        <br>
+        <br>
+        <button type="button" class='secondary-btn' onclick="add_name_field()">New Name &plus;</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="submit" class='next-page'>Get Started &rarr;</button>
+      </form>
+  </div>
+
+</div>
+{% endblock %}
+

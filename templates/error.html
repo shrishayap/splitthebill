@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<title>Error - Reciept Reader</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="flexbox-container">
+        
+  <div class='left-container'>
+      <h1>Error {{error}}</h1>
+      <p>{{desc}}</p>
+      <p>{{ex_desc}}</p>
+      <form action="/">
+          <button type="submit" class='next-page'>Home</button>
+      </form>
+  </div>
+
+  
+
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'template.html'%}
+
+{% block head %}
+<title>Tax and Tip - Receipt Reader</title>
+{% endblock %}
+
+{% block body %}
+<div class="flexbox-container">
+
+    <div class="left-container">
+        <h2>Edit Your Tax and Tip</h2>
+        <p>Our AI tried parsed out the Tax and Tip from the receipt. If we got it wrong, correct it on the right. Dont include any currency symbols (such as $ or &euro;); just the number value.</p>
+    </div>
+
+    <div class="right-container">
+        <form action="/payout" method="post">
+            <label for="tax">Tax</label>
+            <br>
+            <input type="text" name='tax' value = "{{ tax }}" id='tax' pattern="[0-9.]+" required>
+    
+            <br>
+            <br>
+    
+            <label for="tip">Tip</label>
+            <br>
+            <input type="text" name='tip' value = "{{ tip }}" id='tip' pattern="[0-9.]+" required>
+    
+            <br>
+            <br>
+            <br>
+    
+            <button class="next-page" type ="submit">See Results &rarr;</button>
+
+        </form>
+    </div>
+    
+</div>
+{% endblock %}

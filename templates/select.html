@@ -1,0 +1,52 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<title>Select Page</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="flexbox-container">
+    <div class="left-container">
+        <h2 class='fixed'>Select who bought which items</h2>
+        <p class='fixed-p'>Select who bought each of the items. If multiple people shared an item, select all of their names and we will split the costs between them. If our AI misidentified something as an item and you don't want to include it in the calculations, leave all checkboxes for that item blank.</p>
+    </div>
+    
+    <div class="small">
+
+        <form action="/tip" method="post">
+            {% for item in items %} 
+            <p>Who bought {{ item }}?</p>
+
+            {% for name in names %}
+            <label>
+                <input type="checkbox" name="{{item}}" value="{{name}}">
+                <span></span>
+                {{name}}
+                <br>
+            </label>
+            {% endfor %}
+            {% endfor %}
+            <br>
+            <button class="next-page" type="submit">Next &RightArrow;</button>
+
+        </form>
+
+        <script>
+            $(document).ready(function(){
+            $("form").submit(function(){
+            if ($('input:checkbox').filter(':checked').length < 1){
+                alert("Check at least one Check Box");
+            return false;
+            }
+            });
+            });
+
+        </script>
+
+    </div>
+
+</div>
+
+{% endblock %}
+

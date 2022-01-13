@@ -1,0 +1,165 @@
+body {
+    background-color: black;
+    margin: 75px 50px;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    color: white;
+    line-height: 1.4em;
+}
+.small-text {
+    font-size: 14px
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.left-container {
+    width: 45%;
+}
+
+.right-container {
+    padding-right: 10%;
+    padding-top: 6%;
+}
+
+.small{
+    padding-right: 10%;
+    padding-top: 6%;
+    width: 30%
+}
+
+input {
+    background-color: black;
+    border-color: white;
+    border-width: 0px;
+    border-bottom-width: 2.5px;
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    padding: 5px 0px
+}
+
+label {
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    text-align: right;
+}
+
+button {
+    color: white;
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+    background-color: black;
+    border-width: 0px;
+    justify-content: center;
+}
+
+.secondary-btn{
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 22px;
+    padding: 7.5px 20px;
+}
+
+.secondary-btn:hover {
+    background-color: #14FCAF;
+    box-shadow: 2px 2px 20px 3px rgba(20,252,175,0.75);
+    border-color: transparent;
+    cursor: pointer;
+    color: black;
+}
+
+.next-page{
+    background-color: #FF08AA;
+    border-radius: 20px;
+    padding: 7.5px 40px;
+    margin: 40px 0px;
+}
+
+.next-page:hover {
+    box-shadow: 3px 2px 20px 6px rgba(255,8,170,0.75);
+    cursor: pointer;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.image-preview{
+    width: 250px;
+    height: 350px;
+    border: 3px dashed white;
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+.image-preview__image{
+    display: none;
+    width: 100%;
+}
+
+input[type='checkbox']{
+    visibility: hidden;
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+span {
+    height: 13px;
+    width: 13px;
+    border-radius: 2px;
+    border: 1px solid white;
+    display: inline-block;
+}
+
+[type=checkbox]:checked + span {
+    background: white;
+}
+
+.fixed{
+    position: fixed;
+    width:40%;
+}
+
+
+.fixed-p{
+    position: fixed;
+    width:40%;
+    transform: translateY(200px);
+}

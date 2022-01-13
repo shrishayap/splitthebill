@@ -1,0 +1,24 @@
+{% extends 'template.html'%}
+
+{% block head %}
+<title>Payout</title>
+{% endblock %}
+
+{% block body %}
+<h2>Payout</h2>
+<p>Here's how much each person spent including tax and tips</p>
+
+{% for name in payout_dict %}
+<p>{{name}}:    {{payout_dict[name]}}</p>
+{% endfor %}
+
+<br>
+<br>
+<br>
+<br>
+
+<p>Thank you for using reciept reader</p>
+<form action="/">
+    <button class="next-page" type="submit">Start over</button>
+</form>
+{% endblock %}
